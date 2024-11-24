@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/media/spinning-duck.gif" type="image/x-icon" />
+    <meta property="og:title" content="Kilian BARBIER">
+    <meta property="og:description" content="Ceci est mon portfolio. Je suis un Webdesigner/Graphiste/Photographe.">
+    <meta property="og:image" content="https://kilianbarbier.fr/media/kabé-favicon.png">
+    <meta property="og:type" content="Portfolio">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Kilian B | Accueil</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<section class="bento">
+<style>
+  body {
+    overflow: hidden;
+  }
+.cardperso {
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: 0.4s;
+  margin: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 628px;
+}
+.cardperso:hover {
+  box-shadow: rgb(79 70 229) 1px 0 10px;
+  transform: scale(1.05);
+}
+.cardperso img {
+  transition: filter 0.4s, transform 0.4s;
+}
+.cardperso:hover img {
+  filter: none;
+  transform: scale(1);
+}
+#imgContainer:hover #txtOnImg {
+  justify-content: bottom !important;
+}
+</style>
+    <div class="bg-gray-50 py-24 sm:py-48">
+        <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+          <h1 class="text-center font-semibold text-gray-800 text-3xl">Kilian BARBIER</h1>
+          <p class="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-indigo-600 sm:text-5xl">Choose your character :</p>
+          <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
+            <a href="">
+            <div class="relative max-lg:row-start-1 cardperso" style="border-radius:10px;">
+              <div class="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem]"></div>
+              <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(theme(borderRadius.lg)+1px)]"> 
+              <img id="myImage" class="size-full object-cover grayscale-[20%] z-0 blur-sm scale-125 hover:filter-none hover:scale-100 transition ease-in-out delay-150 " src="/media/squirell-1.jpg" alt="">
+              <div id="imgContainer" class="absolute inset-0 flex items-end py-8 justify-center">
+                <h2 id="txtOnImg" class="text-white text-3xl font-bold txt-on-img" style="text-shadow: black 1px 0 10px;">Photographer</h2>
+              </div>                
+              </div>
+              <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem]"></div>
+            </div>
+            </a>
+            <a href="">
+            <div class="relative max-lg:row-start-1 cardperso" style="height:628px">
+              <div class="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem]"></div>
+              <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(theme(borderRadius.lg)+1px)]">
+                <img id="myImage" class="size-full object-cover grayscale-[20%] z-0 blur-sm scale-125 hover:filter-none hover:scale-100 transition ease-in-out delay-150 " src="/media/tel.png" alt="">
+                <div id="imgContainer" class="absolute inset-0 flex items-end py-8 justify-center">
+                  <h2 id="txtOnImg" class="text-white text-3xl font-bold txt-on-img" style="text-shadow: black 1px 0 10px;">Webdesigner</h2>
+                </div>
+              </div>
+              <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem]"></div>
+            </div>
+            </a>
+            <a href="">
+            <div class="relative max-lg:row-start-1 cardperso" style="height:628px">
+              <div class="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem]"></div>
+              <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(theme(borderRadius.lg)+1px)]">
+                <img id="myImage" class="size-full object-cover grayscale-[20%] z-0 blur-sm scale-125 hover:filter-none hover:scale-100 transition ease-in-out delay-150 " src="/media/NakamotoSouls.png" alt="">
+                <div id="imgContainer" class="absolute inset-0 flex items-end py-8 justify-center">
+                  <h2 id="txtOnImg" class="text-white text-3xl font-bold txt-on-img" style="text-shadow: black 1px 0 10px;">Graphist</h2>
+                </div>
+              </div>
+              <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem]"></div>
+            </div>
+            </a>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+
+</body>
+</html>
