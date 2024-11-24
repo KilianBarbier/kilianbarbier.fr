@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/media/spinning-duck.gif" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <title>Kilian B | Photographer</title>
+    <style>
+      .cardperso {
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        transition: 0.4s;
+        padding: 10px;
+        background-color: #f9f9f9;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        height: 350px;
+        width: 350px;
+        animation: spin 1s linear 5s forwards;
+      }
+      .cardperso:nth-child(1) {
+        animation: spin 1s linear 2s forwards;
+      }
+      .cardperso:nth-child(2) {
+        animation: spin 1s linear 4s forwards;
+      }
+      .cardperso:nth-child(3) {
+        animation: spin 1s linear 6s forwards;
+      }
+      .cardperso:nth-child(4) {
+        animation: spin 1s linear 8s forwards;
+      }
+      .cardperso:nth-child(5) {
+        animation: spin 1s linear 10s forwards;
+      }
+      .cardperso:nth-child(6) {
+        animation: spin 1s linear 12s forwards;
+      }
+      .cardperso:nth-child(7) {
+        animation: spin 1s linear 14s forwards;
+      }
+      .cardperso:nth-child(8) {
+        animation: spin 1s linear 16s forwards;
+      }
+      .cardperso:hover {
+        box-shadow: rgb(79 70 229) 1px 0 10px;
+        transition: 1.2s ease-in-out;
+        animation: spin 1s linear 1s forwards;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg) scale(1.02);
+        }
+        25% {
+          transform: rotate(1deg) scale(1.02);
+        }
+        50% {
+          transform: rotate(0deg) scale(1.02);
+        }
+        75% {
+          transform: rotate(-1deg) scale(1.02);
+        }
+        100% {
+          transform: rotate(0deg) scale(1);
+        }
+      }
+      /* --------------------- */
+      .flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+    </style>
+  </head>
+  <body>
+    <div class="container mx-auto p-4">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+      >
+        <div class="bg-gray-200 p-4 cardperso">
+            <img src="https://via.placeholder.com/150" alt="Placeholder Image" class="mb-2 hover:tansform-rotate-90 ease-in-out">
+            
+        </div>
+        <div class="bg-gray-200 p-4 cardperso">Item 2
+            
+        </div>
+        <div class="bg-gray-200 p-4 cardperso">Item 3
+            
+        </div>
+        <div class="bg-gray-200 p-4 cardperso">Item 4
+            
+        </div>
+        <div class="bg-gray-200 p-4 cardperso">Item 5
+            
+        </div>
+        <div class="bg-gray-200 p-4 cardperso">Item 6
+            
+        </div>
+        <div class="bg-gray-200 p-4 cardperso">Item 7
+            
+        </div>
+        <div class="bg-gray-200 p-4 cardperso">Item 8
+            
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
