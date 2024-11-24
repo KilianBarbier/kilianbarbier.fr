@@ -1,1 +1,1 @@
-<a href="kilianbarbier.fr"><img src="https://i.giphy.com/fxNRr2Uu0Uaq1wKtui.webp"></img></a>
+<a href="https://kilianbarbier.fr"><img src="/media/fxNRr2Uu0Uaq1wKtui.webp"></img></a>
