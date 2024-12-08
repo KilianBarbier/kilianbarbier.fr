@@ -36,8 +36,7 @@
             top: 0;
             left: 0;
             right: 0;
-            color: #fff
-            ;
+            color: #fff;
             background: transparent;
             clip-path: polygon(0 20%, 100% 20%, 100% 30%, 0 30%);
             opacity: 0.6;
@@ -85,6 +84,20 @@
             }
             90% {
                 transform: translateY(-6px) skewX(-5deg);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .glow-text {
+                font-size: 3rem;
+                transform: scale(1.2);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .glow-text {
+                font-size: 2rem;
+                transform: scale(1);
             }
         }
     </style>
