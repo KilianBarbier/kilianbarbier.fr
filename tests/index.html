@@ -24,7 +24,7 @@
         margin: 0;
         font-family: "Arial", sans-serif;
         overflow: hidden;
-        cursor: url('https://kilianbarbier.fr/media/cursors/cursor2.png'), auto;
+        cursor: url("https://kilianbarbier.fr/media/cursors/cursor2.png"), auto;
       }
       .silkscreen-regular {
         font-family: "Silkscreen", sans-serif;
@@ -135,20 +135,36 @@
         font-size: 1.5rem;
         margin-top: 20px;
         padding: 10px 20px;
-        background: rgba(0, 0, 0, 0.432);
+        background: black;
         border: solid 1px white;
         cursor: pointer;
         transition: 0.3s;
-        margin-top: 20px;
         font-weight: 100;
         font-family: "Press Start 2P", monospace;
         box-shadow: 0 0 10px rgba(0, 195, 255, 0.6);
+        color: white;
+        position: relative;
+        overflow: hidden;
+      }
+
+      #btn-next::before {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 300%;
+        height: 100%;
+        transform: skewX(-20deg);
+        background-color: rgba(0, 0, 0, 0.432);
+        transition: 0.5s;
+        color:#fff;
       }
       #btn-next:hover {
-  background: rgba(0, 195, 255, 0.2);
-  box-shadow: 0 0 20px rgba(0, 195, 255, 0.9);
-}
-
+        background: rgb(0, 255, 255);
+        box-shadow: 0 0 20px rgb(0, 195, 255),
+          0 0 30px rgb(0, 255, 242);
+        color: black !important;
+        transform: scale(1.1);
+      }
     </style>
   </head>
   <body>
@@ -159,7 +175,7 @@
       <a
         id="btn-next"
         href="next.html"
-        style="color: white; text-decoration: none"
+        style="color: white; text-decoration: none;margin-top: 30px"
         >Next</a
       >
     </section>
