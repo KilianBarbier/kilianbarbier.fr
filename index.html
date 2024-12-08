@@ -5,8 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="/media/spinning-duck.gif" type="image/x-icon" />
   <meta property="og:title" content="Kilian BARBIER">
-  <meta property="og:description" content="Ceci est mon portfolio. Je suis un Webdesigner/Graphiste/Photographe.">
-  <meta property="og:image" content="https://kilianbarbier.fr/media/kabé-favicon.png">
+  <meta property="og:description" content="This is my portfolio. I am a Webdesigner/Graphic Designer/Photographer.">
+  <!-- ADD DESCRIPTION tags -->
+  <meta property="og:url" content="https://kilianbarbier.fr">
+  <meta property="og:site_name" content="K.BARBIER | Webdesigner">
+  <meta name="description" content="This is my portfolio. I am a Webdesigner/Graphic Designer/Photographer."/>
+  <meta property="og:image" content="https://kilianbarbier.fr/media/kabé-favicon.webp">
   <meta property="og:type" content="Portfolio">
   <link rel="stylesheet" href="/css/style.css">
   <title>Kilian B | Accueil</title>
@@ -33,10 +37,14 @@
   overflow: hidden;
   height: 628px;
   border: 1px solid rgba(0,0,0,0.1);
+  filter: grayscale(100%);
 }
 .cardperso:hover {
   box-shadow: rgb(79 70 229) 1px 0 10px;
   transform: scale(1.05);
+  transition: 0.4s;
+  filter: grayscale(0%);
+
 }
 .cardperso img {
   transition: filter 0.4s, transform 0.4s;
@@ -92,18 +100,21 @@
 }
 
 </style>
-  <div class="bg-gray-50 py-24 sm:py-12" style="background:rgb(240, 240, 240);">
+  <div class="bg-gray-50 py-24 sm:py-12 px-48" style="background:rgb(240, 240, 240);">
     <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8" style="padding-top: 20px; padding-bottom: 20px;">
       <h1 class="text-center font-semibold text-gray-800 text-3xl">Kilian BARBIER</h1>
-      <p class="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-indigo-600 sm:text-5xl reflection">
+      <p class="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-indigo-600 sm:text-5xl reflection" style="line-height: 66px;
+      text-align: center;
+      margin-top: 0px;">
         Choose your character :
+        <h6 class="mx-auto mt-2 max-w-lg text-balance text-center text-s font-semibold tracking-tight text-gray-600 sm:text-s reflection -mt[-12px]">HOVER A CARD TO REVEAL IT</h6>
       </p>
       <div class="grid gap-4 sm:mt-16 lg:grid-cols-3 lg:auto-rows-auto">
       <a href="">
       <div class="relative max-lg:row-start-1 cardperso reflection" style="border-radius:10px;">
         <div class="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem]"></div>
         <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(theme(borderRadius.lg)+1px)]"> 
-        <img id="myImage" class="size-full object-cover grayscale-[20%] z-0 blur-sm scale-125 hover:filter-none hover:scale-100 transition ease-in-out delay-150 " src="/media/squirell-1.jpg" alt="">
+        <img id="myImage" class="size-full object-cover grayscale-[20%] z-0 blur-sm scale-125 hover:filter-none hover:scale-100 transition ease-in-out delay-150 " src="/media/squirell-1.webp" alt="">
         <div id="imgContainer" class="absolute inset-0 flex items-end py-8 justify-center">
         <h2 id="txtOnImg" class="text-white text-3xl font-bold txt-on-img" style="text-shadow: black 1px 0 10px;">Photographer</h2>
         </div>                
@@ -115,7 +126,7 @@
       <div class="relative max-lg:row-start-1 cardperso reflection" style="height:628px">
         <div class="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem]"></div>
         <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(theme(borderRadius.lg)+1px)]">
-        <img id="myImage" class="size-full object-cover grayscale-[20%] z-0 blur-sm scale-125 hover:filter-none hover:scale-100 transition ease-in-out delay-150 " src="/media/tel.png" alt="">
+        <img id="myImage" class="size-full object-cover grayscale-[20%] z-0 blur-sm scale-125 hover:filter-none hover:scale-100 transition ease-in-out delay-150 " src="/media/tel.webp" alt="">
         <div id="imgContainer" class="absolute inset-0 flex items-end py-8 justify-center">
           <h2 id="txtOnImg" class="text-white text-3xl font-bold txt-on-img" style="text-shadow: black 1px 0 10px;">Webdesigner</h2>
         </div>
@@ -127,7 +138,7 @@
       <div class="relative max-lg:row-start-1 cardperso reflection" style="height:628px">
         <div class="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem]"></div>
         <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(theme(borderRadius.lg)+1px)]">
-        <img id="myImage" class="size-full object-cover grayscale-[20%] z-0 blur-sm scale-125 hover:filter-none hover:scale-100 transition ease-in-out delay-150 " src="/media/NakamotoSouls.png" alt="">
+        <img id="myImage" class="size-full object-cover grayscale-[20%] z-0 blur-sm scale-125 hover:filter-none hover:scale-100 transition ease-in-out delay-150 " src="/media/NakamotoSouls.webp" alt="">
         <div id="imgContainer" class="absolute inset-0 flex items-end py-8 justify-center">
           <h2 id="txtOnImg" class="text-white text-3xl font-bold txt-on-img" style="text-shadow: black 1px 0 10px;">Graphist</h2>
         </div>
@@ -139,7 +150,7 @@
         <div class="relative cardperso reflection" style="height: 100%; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
         <div class="absolute inset-px rounded-lg bg-white"></div>
         <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
-          <img id="myImage" class="size-full object-cover grayscale-[20%] z-0 blur-sm scale-125 hover:filter-none hover:scale-100 transition ease-in-out delay-150 " src="/media/image-curriculum-card.png" alt="">
+          <img id="myImage" class="size-full object-cover grayscale-[20%] z-0 blur-sm scale-125 hover:filter-none hover:scale-100 transition ease-in-out delay-150 " src="/media/image-curriculum-card.webp" alt="">
           <div id="imgContainer" class="absolute inset-0 flex items-end py-8 justify-center">
           <h2 id="txtOnImg" class="text-white text-3xl font-bold txt-on-img" style="text-shadow: black 1px 0 10px;">Curriculum Vitae</h2>
           </div>
@@ -150,6 +161,28 @@
       </div>
       </div>
     </div>
+    
+<footer class="bg-white rounded-lg shadow m-4 dark:bg-white-800 -mb-6 px-6 reflection mt-[100px]">
+  <div class="w-90 mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://linkedin.com/" class="hover:underline mr-3 hover:text-indigo-600">K.BARBIER</a>All Rights Reserved.
+  </span>
+  <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+      <li>
+          <a href="#" class="hover:underline me-4 md:me-6 hover:text-indigo-600">About</a>
+      </li>
+      <li>
+          <a href="#" class="hover:underline me-4 md:me-6 hover:text-indigo-600">Privacy Policy</a>
+      </li>
+      <li>
+          <a href="#" class="hover:underline me-4 md:me-6 hover:text-indigo-600">Licensing</a>
+      </li>
+      <li>
+          <a href="#" class="hover:underline hover:text-indigo-600">Contact</a>
+      </li>
+  </ul>
+  </div>
+</footer>
+
     </div>
 </body>
 </html>
