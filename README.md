@@ -1,1 +1,1 @@
-<iframe src="https://kilianbarbier.fr/tests/index.html" width="600" height="400"></iframe>
+<a href="https://kilianbarbier.fr"><img style="width:100%;height:40%;" src="/media/fxNRr2Uu0Uaq1wKtui.webp"></img></a>

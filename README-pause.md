@@ -1,1 +1,0 @@
-<a href="https://kilianbarbier.fr"><img style="width:100%;height:40%;" src="/media/fxNRr2Uu0Uaq1wKtui.webp"></img></a>
