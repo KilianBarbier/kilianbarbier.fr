@@ -167,21 +167,19 @@
           0 0 30px rgb(0, 255, 242);
         color: black !important;
         transform: scale(1.1);
-      }.typewriter {
-    position: relative;
-    display: inline-block;
-  }
+      }
+/* 
   .typewriter {
     position: relative;
     display: inline-block;
   }
 
   .typewriter h1 {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: 0.15em solid rgb(0, 183, 255); /* The typewriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Centers the text */
-    letter-spacing: 0.15em; /* Adjust as needed */
+    overflow: hidden; 
+    border-right: 0.15em solid rgb(0, 183, 255); 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    letter-spacing: 0.15em;
     animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite, flicker 2.4s infinite;
     position: relative;
   }
@@ -203,16 +201,15 @@
     50% {
       border-color: rgb(173, 255, 255);
     }
-  }
+  }  */
     </style>
   </head>
   <body>
     <!-- FULL SCREEN SECTION CENTERED ELEMENTS -->
     <section class="max-h-svh">
-      <div class="typewriter">
-        <h1 class="glow-text" id="typewriter-text" style="text-align: center">WELCOME&hairsp;!</h1>
-      </div>
-      <br />
+      <!-- <div class="typewriter"> -->
+        <h1 class="glow-text" id="typewriter-text" style="text-align: center"><span class="glow-text">HEY</span><br><span class="glow-text">YOU&hairsp;!</span></h1>
+      <!-- </div> -->
       <a
         id="btn-next"
         href="next.html"
@@ -221,7 +218,7 @@
       >
     </section>
     <!-- END FULL SCREEN SECTION -->
-    <script>
+    <!-- <script>
         // Wait for the typewriter animation to finish, then set overflow to visible
         window.onload = function () {
           const typewriterText = document.getElementById('typewriter-text');
@@ -229,6 +226,6 @@
             typewriterText.style.overflow = 'visible';
           }, 3500); // Match the duration of the typing animation
         };
-      </script>
+      </script> -->
   </body>
 </html>
