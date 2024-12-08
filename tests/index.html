@@ -1,109 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TESTING GLOW</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap");
+      body {
+        background: radial-gradient(
+          circle,
+          rgb(19, 1, 1) 0%,
+          rgba(8, 0, 0, 1) 48%,
+          rgb(10, 10, 10) 100%
+        );
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: "Arial", sans-serif;
+        overflow: hidden;
+        cursor: url('/media/cursors/cursor.png'), auto;
+      }
+      .silkscreen-regular {
+        font-family: "Silkscreen", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
 
-        body {
-            background: radial-gradient(circle, rgb(19, 1, 1) 0%, rgba(8,0,0,1) 48%, rgb(10, 10, 10) 100%);
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            overflow: hidden;
+      .silkscreen-bold {
+        font-family: "Silkscreen", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      .glow-text {
+        font-size: 5rem;
+        font-family: "Press Start 2P", monospace;
+        position: relative;
+        color: #fff;
+        text-shadow: 0 0 10px #0ff, 0 0 20px rgb(255, 0, 234), 0 0 30px #0ff,
+          0 0 40px #0ff;
+        animation: flicker 2s infinite;
+        transform: scale(1.5);
+        image-rendering: pixelated;
+      }
+      .glow-text::before,
+      .glow-text::after {
+        content: "WELCOME";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        color: #fff;
+        background: transparent;
+        clip-path: polygon(0 20%, 100% 20%, 100% 30%, 0 30%);
+        opacity: 0.6;
+        animation: distort 1.9s infinite ease-in-out;
+      }
+
+      .glow-text::after {
+        clip-path: polygon(0 60%, 100% 60%, 100% 70%, 0 70%);
+        opacity: 0.3;
+      }
+
+      @keyframes flicker {
+        0%,
+        100% {
+          text-shadow: 0 0 10px rgb(109, 248, 248), 0 0 20px rgb(242, 142, 255),
+            0 0 30px rgb(109, 248, 248), 0 0 40px rgb(109, 248, 248);
         }
+        50% {
+          text-shadow: 0 0 5px rgb(109, 248, 248), 0 0 10px rgb(109, 248, 248),
+            0 0 15px rgb(109, 248, 248), 0 0 20px rgb(211, 144, 202);
+        }
+      }
 
+      @keyframes distort {
+        0%,
+        100% {
+          transform: translateX(1px) skewX(-1deg);
+        }
+        10% {
+          transform: translateY(-5px) skewX(-10deg);
+        }
+        20% {
+          transform: translateX(-6px) skewX(-5deg);
+        }
+        35% {
+          transform: translateX(-5px) skewX(-10deg);
+        }
+        40% {
+          transform: translateX(6px) skewX(5deg);
+        }
+        55% {
+          transform: translateY(5px) skewX(10deg);
+        }
+        60% {
+          transform: translateX(-5px) skewX(-10deg);
+        }
+        85% {
+          transform: translateX(5px) skewX(10deg);
+        }
+        90% {
+          transform: translateY(-6px) skewX(-5deg);
+        }
+      }
+
+      @media (max-width: 768px) {
         .glow-text {
-            font-size: 5rem;
-            font-family: 'Press Start 2P', monospace;
-            position: relative;
-            color: #fff;
-            text-shadow: 0 0 10px #0ff, 0 0 20px rgb(255, 0, 234), 0 0 30px #0ff, 0 0 40px #0ff;
-            animation: flicker 2s infinite;
-            transform: scale(1.5); 
-            image-rendering: pixelated;
+          font-size: 3.5rem;
+          transform: scale(1);
         }
-        .glow-text::before,
-        .glow-text::after {
-            content: 'WELCOME';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            color: #fff;
-            background: transparent;
-            clip-path: polygon(0 20%, 100% 20%, 100% 30%, 0 30%);
-            opacity: 0.6;
-            animation: distort 1.9s infinite ease-in-out;
-        }
+      }
 
-        .glow-text::after {
-            clip-path: polygon(0 60%, 100% 60%, 100% 70%, 0 70%);
-            opacity: 0.3;
+      @media (max-width: 480px) {
+        .glow-text {
+          font-size: 2rem;
+          transform: scale(1.2);
         }
+      }
+      .max-h-svh {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #btn-next {
+        font-size: 1.5rem;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: black;
+        border: solid 1px white;
+        cursor: pointer;
+        transition: 0.3s;
+        margin-top: 20px;
+        font-weight: 100;
+        font-family: "Press Start 2P", monospace;
+        box-shadow: 0 0 10px rgba(0, 195, 255, 0.6);
+      }
+      #btn-next:hover {
+  background: rgba(0, 195, 255, 0.2);
+  box-shadow: 0 0 20px rgba(0, 195, 255, 0.9);
+}
 
-        @keyframes flicker {
-            0%, 100% {
-                text-shadow: 0 0 10px rgb(109, 248, 248), 0 0 20px rgb(242, 142, 255), 0 0 30px rgb(109, 248, 248), 0 0 40px rgb(109, 248, 248);
-            }
-            50% {
-                text-shadow: 0 0 5px rgb(109, 248, 248), 0 0 10px rgb(109, 248, 248), 0 0 15px rgb(109, 248, 248), 0 0 20px rgb(211, 144, 202);
-            }
-        }
-
-        @keyframes distort {
-            0%, 100% {
-                transform: translateX(1px) skewX(-1deg);
-            }
-            10% {
-                transform: translateY(-5px) skewX(-10deg);
-            }
-            20% {
-                transform: translateX(-6px) skewX(-5deg);
-            }
-            35% {
-                transform: translateX(-5px) skewX(-10deg);
-            }
-            40% {
-                transform: translateX(6px) skewX(5deg);
-            }
-            55% {
-                transform: translateY(5px) skewX(10deg);
-            }
-            60% {
-                    transform: translateX(-5px) skewX(-10deg);
-            }
-            85% {
-                transform: translateX(5px) skewX(10deg);
-            }
-            90% {
-                transform: translateY(-6px) skewX(-5deg);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .glow-text {
-                font-size: 3.5rem;
-                transform: scale(1);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .glow-text {
-                font-size: 2rem;
-                transform: scale(1.2);
-            }
-        }
     </style>
-</head>
-<body>
-    <div class="glow-text" style="text-align:center;">WELCOME&hairsp;!</div><br>
-    <a id="btn-next" href="next.html" style="color: white; text-decoration: none;">Next</a>
-</body>
+  </head>
+  <body>
+    <!-- FULL SCREEN SECTION CENTERED ELEMENTS -->
+    <section class="max-h-svh">
+      <div class="glow-text" style="text-align: center">WELCOME&hairsp;!</div>
+      <br />
+      <a
+        id="btn-next"
+        href="next.html"
+        style="color: white; text-decoration: none"
+        >Next</a
+      >
+    </section>
+    <!-- END FULL SCREEN SECTION -->
+  </body>
 </html>
